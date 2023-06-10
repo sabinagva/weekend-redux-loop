@@ -11,3 +11,4 @@ pool.query('SELECT' * FROM "feedback")
     console.log('error in server get', error)
 })
 })
+module.exports = router
