@@ -1,0 +1,27 @@
+
+.Support {
+    text-align: center;
+  }
+  
+  .Support-header {
+    background-color: #033076;
+    min-height: 70px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .Support-title {
+    font-size: 2em;
+  }
+  
+  .Support-intro {
+    font-size: large;
+  }
+  
+  h4 {
+    font-style: italic;
+  }
+  #Support-input {
+    margin-right: 50px;
+  }

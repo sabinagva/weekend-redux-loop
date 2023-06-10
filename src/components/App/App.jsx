@@ -1,8 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-import { Router } from 'express';
-import { Route } from 'react-router-dom/cjs/react-router-dom.min';
 import { HashRouter as Router,Route } from 'react-router-dom';
 //importing feedback components
 import Feelings from '../Feelings/Feelings'
@@ -37,12 +35,12 @@ function App() {
       <FeedbackResult/>
     </Route>
 
-    <div className='App'>
+    {/* <div className='App'>
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
-    </div>
+    </div> */}
   </Router>
 
   );
