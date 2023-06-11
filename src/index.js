@@ -13,6 +13,9 @@ const feelingsReducer = (state = [], action) => {
     if( action.type === 'GET_FEELINGS') {
         return action.payload
     }
+    else if (action.type === 'GET_NEW_FEEDBACK') {
+        return state = []
+    }
     return state;
 }
 const commentsReducer = (state = [], action) => {
@@ -20,11 +23,17 @@ const commentsReducer = (state = [], action) => {
     if( action.type === 'GET_COMMENTS') {
         return action.payload
     }
+    else if (action.type === 'GET_NEW_FEEDBACK') {
+        return state = []
+    }
     return state;
 }
 const understandingReducer = (state = [], action) => {
     if( action.type === 'GET_UNDERSTANDING') {
         return action.payload
+    }
+    else if (action.type === 'GET_NEW_FEEDBACK') {
+        return state = []
     }
     
     return state;
@@ -34,12 +43,18 @@ const supportReducer = (state = [], action) => {
     if( action.type === 'GET_SUPPORT') {
         return action.payload
     }
+    else if (action.type === 'GET_NEW_FEEDBACK') {
+        return state = []
+    }
     return state;
 }
 
 const feedbackResultReducer = (state = [], action) => {
     if( action.type === 'GET_FEEDBACK_RESULT') {
         return action.payload
+    }
+    else if (action.type === 'GET_NEW_FEEDBACK') {
+        return state = []
     }
     return state;
 }
