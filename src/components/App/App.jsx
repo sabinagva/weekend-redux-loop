@@ -8,28 +8,11 @@ import Support from '../Support/Support'
 import Comments from '../Comments/Comments'
 import Understanding from '../Understanding/Understanding'
 import FeedbackResult from '../FeedbackResult/FeedbackResult'
+import NewFeedback from '../NewFeedback/NewFeedback'
 
 
 function App() {
-  const dispatch = useDispatch()
-  //GET
-  //getting input values into array then into a database
-  // const getFeedback = () =>{
-  //   axios.get('/')
-  //   .then( response =>{
-  //     dispatch ({type: 'SET_FEEDBACK', payload: response.data})
-  //     console.log('get response data is', response.data)
 
-  //   })
-  //   .catch( error => {
-  //     console.log('error getting feedback')
-  //     alert('oh no we cant get your feedback :(')
-  //   })
-  // }
-
-  useEffect (() =>{
-    getFeedback()
-  },[])
 
   return (
   <Router>
@@ -50,8 +33,8 @@ function App() {
       <Comments/>
     </Route>
     {/* Feedback Result route(1) */}
-    <Route exact path = "/feedback">
-      <FeedbackResult getFeedback = {getFeedback}/>
+    <Route exact path = "/feedbackResult">
+      <FeedbackResult/>
     </Route>
     <Route exact path = "/Newfeedback">
       <NewFeedback/>

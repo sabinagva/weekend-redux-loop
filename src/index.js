@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App/App';
 //importing redux
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
-import { createStore, combineReducers, applyMiddleware} from 'redux';
+
 
 //reducers
 const feelingsReducer = (state = [], action) => {
@@ -35,9 +36,8 @@ const reduxStore = createStore(
         understandingReducer,
         supportReducer
 
-    }).applyMiddleware(
-        logger
-)
+    }),
+    applyMiddleware(logger)
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

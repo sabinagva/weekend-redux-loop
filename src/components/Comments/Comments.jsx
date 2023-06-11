@@ -1,11 +1,13 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import './Comments.css'
 function Comments () {
     const [commentsInput, setCommentsInput] = useState()
     const commentsReducer = (store => store.commentsReducer)
     const dispatch = useDispatch()
 
-    const handleNextBtn = () => {
+    const handleNextBtn = (event) => {
+        event.preventDefault()
         dispatch({type: 'GET_COMMENTS', payload: commentsInput})
         setCommentsInput('')
 
