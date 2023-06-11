@@ -26,7 +26,7 @@ function Feelings () {
         <form>
             <label>Feelings?  </label>
             <input
-            type="text"
+            type="number"
             id='Feelings-input'
             value={feelingsInput}
             onChange={(event) => setFeelingsInput(event.target.value)}

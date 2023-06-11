@@ -27,7 +27,7 @@ function Understanding () {
         <form>
             <label>Understanding?  </label>
             <input
-            type="text"
+            type="number"
             id='Understanding-input'
             value={understandingInput}
             onChange={(event) => setUnderstandingInput(event.target.value)}

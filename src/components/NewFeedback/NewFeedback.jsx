@@ -1,5 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import './NewFeedback.css'
+
 
 function NewFeedback () {
 
@@ -14,10 +16,14 @@ function NewFeedback () {
     }
 
     return(
-        <div>
+        <div className="feedbackContainer">
+            
             <header>Feedback!</header>
-            <h4>Thank you!</h4>
-            <button onClick={handleNewFeedback}>Leave New Feedback!</button>
+            
+                <div className="button-container">
+                    <h3 className="text">Thank you!</h3>
+                    <button className="button" onClick={handleNewFeedback}>Leave New Feedback!</button>
+                </div>
         </div>
     )
 }

@@ -4,6 +4,7 @@
 import axios from "axios"
 import { useSelector } from "react-redux"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
+import './FeedbackResult.css'
 
 
 function FeedbackResult () {
@@ -38,16 +39,19 @@ function FeedbackResult () {
 
     return(
         <>
-        <h1>Review Your Feedback</h1>
-        {/* we are grabing all of the feedbacks from the server and rendering them 
-        to feedback result page */}
-        <div>
-            <p>Feeling: {feelingsReducer}</p>
-            <p>Understanding: {understandingReducer}</p>
-            <p>Support: {supportReducer}</p>
-            <p>Comments: {commentsReducer}</p>
+        <div className="result-container">
+            <h1>Review Your Feedback</h1>
+            {/* we are grabing all of the feedbacks from the server and rendering them 
+            to feedback result page */}
+            <div className="results">
+                <p>Feeling: {feelingsReducer}</p>
+                <p>Understanding: {understandingReducer}</p>
+                <p>Support: {supportReducer}</p>
+                <p>Comments: {commentsReducer}</p>
+            <button onClick={saveFeedback}>Submit</button>
+
+            </div>
         </div>
-        <button onClick={saveFeedback}>Submit</button>
         </>
 
     )

@@ -1,0 +1,23 @@
+.feedbackContainer {
+    text-align: center;
+    margin-top: 100px;
+    
+    }
+header {
+    border: 2px solid black; /* Add border style */
+    padding: 10px;
+    
+}
+
+.button-container{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 50px;
+    margin-top: 20px;
+
+}
+.button {
+    background-color: rgb(8, 164, 247);
+    color: white;
+    padding: 7px;
+    border-radius: 2px;
+}

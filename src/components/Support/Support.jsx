@@ -27,7 +27,7 @@ const handleNextBtn = (event) => {
         <form>
             <label>Support?  </label>
             <input
-            type="text"
+            type="number"
             value={supportInput}
             id='Support-input'
             onChange={(event) => setSupportInput(event.target.value)}
