@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 import './Feelings.css'
 function Feelings () {
     const [feelingsInput, setFeelingsInput] =useState('');
     const dispatch = useDispatch()
+    const history = useHistory()
 
     const handleNextBtn = (event) => {
         event.preventDefault()
+        history.push('/understanding')
         dispatch({type: 'GET_FEELINGS', payload: feelingsInput})
         setFeelingsInput('')
 

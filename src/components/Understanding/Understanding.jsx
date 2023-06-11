@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import './Understanding.css'
 function Understanding () {
     const[understandingInput, setUnderstandingInput] = useState('');
     const dispatch = useDispatch()
+    const history = useHistory()
     
-    handleNextBtn = (event) => {
+    const handleNextBtn = (event) => {
         event.preventDefault()
+        history.push('/support')
         dispatch({type: 'GET_UNDERSTANDING', payload: understandingInput})
         setUnderstandingInput('')
     }
@@ -27,6 +30,8 @@ function Understanding () {
             type="text"
             id='Understanding-input'
             value={understandingInput}
+            onChange={(event) => setUnderstandingInput(event.target.value)}
+
             /> 
             <button onClick={handleNextBtn}>Next</button>
 

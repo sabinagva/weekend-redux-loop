@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 import './Comments.css'
 function Comments () {
     const [commentsInput, setCommentsInput] = useState('')
     const commentsReducer = (store => store.commentsReducer)
     const dispatch = useDispatch()
+    const history = useHistory()
 
     const handleNextBtn = (event) => {
         event.preventDefault()
+        history.push('/FeedbackResult')
         dispatch({type: 'GET_COMMENTS', payload: commentsInput})
         setCommentsInput('')
 

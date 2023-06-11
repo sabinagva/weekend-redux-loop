@@ -26,6 +26,7 @@ const understandingReducer = (state = [], action) => {
     if( action.type === 'GET_UNDERSTANDING') {
         return action.payload
     }
+    
     return state;
 }
 

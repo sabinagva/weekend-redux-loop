@@ -3,6 +3,7 @@
 
 import axios from "axios"
 import { useSelector } from "react-redux"
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 
 
 function FeedbackResult () {
@@ -10,10 +11,11 @@ function FeedbackResult () {
     const feelingsReducer = useSelector(store => store.feelingsReducer)
     const understandingReducer = useSelector(store => store.understandingReducer)
     const supportReducer = useSelector(store => store.supportReducer)
+    const history = useHistory()
 
     const saveFeedback = () => {
 
-        axios.post("/feebackResult",
+        axios.post("/feedbackResult",
         {
             feelings: feelingsReducer,
             comments: commentsReducer,
@@ -21,13 +23,14 @@ function FeedbackResult () {
             support: supportReducer
         })
         .then(response => {
-            console.log('your feedback is submited')
-            alert('yay your feedback is submited')
+            console.log('your feedback is submitted')
+            alert('yay your feedback is submitted')
 
         })
         .catch((error) => {
             console.log('there is an error posting your feedback', error)
         })
+        history.push('/Newfeedback')
     }
 
 

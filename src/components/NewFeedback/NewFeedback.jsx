@@ -1,11 +1,14 @@
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
 
 function NewFeedback () {
 
     const dispatch = useDispatch()
+    const history = useHistory()
     
     const handleNewFeedback = () =>{
-     dispatch({type: GET_NEW_FEEDBACK})
+     dispatch({type: 'GET_NEW_FEEDBACK'})
+     history.push('/feelings')
 
 
     }
