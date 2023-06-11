@@ -2,8 +2,12 @@ import { useState } from 'react'
 import './Comments.css'
 function Comments () {
     const [commentsInput, setCommentsInput] = useState()
+    const commentsReducer = (store => store.commentsReducer)
+    const dispatch = useDispatch()
 
     const handleNextBtn = () => {
+        dispatch({type: 'GET_COMMENTS', payload: commentsInput})
+        setCommentsInput('')
 
 
     }

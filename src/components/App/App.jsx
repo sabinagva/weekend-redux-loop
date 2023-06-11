@@ -14,19 +14,18 @@ function App() {
   const dispatch = useDispatch()
   //GET
   //getting input values into array then into a database
+  // const getFeedback = () =>{
+  //   axios.get('/')
+  //   .then( response =>{
+  //     dispatch ({type: 'SET_FEEDBACK', payload: response.data})
+  //     console.log('get response data is', response.data)
 
-  const getFeedback = () =>{
-    axios.get('/')
-    .then( response =>{
-      dispatch ({type: 'SET_FEEDBACK', payload: response.data})
-      console.log('get response data is', response.data)
-
-    })
-    .catch( error => {
-      console.log('error getting feedback')
-      alert('oh no we cant get your feedback :(')
-    })
-  }
+  //   })
+  //   .catch( error => {
+  //     console.log('error getting feedback')
+  //     alert('oh no we cant get your feedback :(')
+  //   })
+  // }
 
   useEffect (() =>{
     getFeedback()
