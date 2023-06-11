@@ -21,3 +21,15 @@
 // }
 
 // export default FeedbackForm
+
+function FeedbackResult ({getFeedback}) {
+
+
+    return(
+        <div>
+            
+        </div>
+
+    )
+}
+export default FeedbackResult

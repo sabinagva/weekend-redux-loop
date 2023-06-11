@@ -11,6 +11,26 @@ import FeedbackResult from '../FeedbackResult/FeedbackResult'
 
 
 function App() {
+  const dispatch = useDispatch()
+  //GET
+  //getting input values into array then into a database
+
+  const getFeedback = () =>{
+    axios.get('/')
+    .then( response =>{
+      dispatch ({type: 'SET_FEEDBACK', payload: response.data})
+      console.log('get response data is', response.data)
+
+    })
+    .catch( error => {
+      console.log('error getting feedback')
+      alert('oh no we cant get your feedback :(')
+    })
+  }
+
+  useEffect (() =>{
+    getFeedback()
+  },[])
 
   return (
   <Router>
@@ -32,7 +52,10 @@ function App() {
     </Route>
     {/* Feedback Result route(1) */}
     <Route exact path = "/feedback">
-      <FeedbackResult/>
+      <FeedbackResult getFeedback = {getFeedback}/>
+    </Route>
+    <Route exact path = "/Newfeedback">
+      <NewFeedback/>
     </Route>
 
     {/* <div className='App'>
