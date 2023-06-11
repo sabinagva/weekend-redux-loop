@@ -1,7 +1,19 @@
+import { useState } from 'react'
+import { useDispatch } from 'react-redux';
 import './Understanding.css'
 function Understanding () {
+    const[understandingInput, setUnderstandingInput] = useState('');
+    const dispatch = useDispatch()
+    
+    handleNextBtn = (event) => {
+        event.preventDefault()
+        dispatch({type: 'GET_UNDERSTANDING', payload: understandingInput})
+        setUnderstandingInput('')
+    }
+
 
     return(
+
 
         <div className='Understanding'>
       <header className='Understanding-header'>
@@ -14,8 +26,10 @@ function Understanding () {
             <input
             type="text"
             id='Understanding-input'
+            value={understandingInput}
             /> 
-            <button>Next</button>
+            <button onClick={handleNextBtn}>Next</button>
+
         </form>
         </div>
     )

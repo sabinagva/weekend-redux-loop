@@ -1,5 +1,16 @@
+import { useState } from 'react'
+import { useDispatch } from 'react-redux';
 import './Feelings.css'
 function Feelings () {
+    const [feelingsInput, setFeelingsInput] =useState('');
+    const dispatch = useDispatch()
+
+    const handleNextBtn = (event) => {
+        event.preventDefault()
+        dispatch({type: 'GET_FEELINGS', payload: feelingsInput})
+        setFeelingsInput('')
+
+    }
 
     return(
 
@@ -14,8 +25,11 @@ function Feelings () {
             <input
             type="text"
             id='Feelings-input'
+            value={feelingsInput}
+            onChange={(event) => setFeelingsInput(event.target.value)}
+
             /> 
-            <button>Next</button>
+            <button onClick={handleNextBtn}>Next</button>
         </form>
         </div>
     )

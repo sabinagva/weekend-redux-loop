@@ -1,6 +1,18 @@
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import './Support.css'
 function Support () {
+    
 
+const [supportInput, setSupportInput] = useState('')
+const dispatch = useDispatch()
+
+const handleNextBtn = (event) => {
+    event.preventDefault()
+    dispatch({type: 'GET_SUPPORT', payload: supportInput})
+    setSupportInput('')
+
+}
     return(
 
         <div className='Support'>
@@ -13,9 +25,10 @@ function Support () {
             <label>Support?  </label>
             <input
             type="text"
+            value={supportInput}
             id='Support-input'
             /> 
-            <button>Next</button>
+            <button onClick={handleNextBtn}>Next</button>
         </form>
         </div>
     )

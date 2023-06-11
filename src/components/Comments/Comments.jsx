@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import './Comments.css'
 function Comments () {
-    const [commentsInput, setCommentsInput] = useState()
+    const [commentsInput, setCommentsInput] = useState('')
     const commentsReducer = (store => store.commentsReducer)
     const dispatch = useDispatch()
 

@@ -18,4 +18,4 @@ function NewFeedback () {
         </div>
     )
 }
-export default Newfeedback;
+export default NewFeedback;
