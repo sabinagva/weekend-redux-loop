@@ -14,6 +14,8 @@ function FeedbackResult () {
     const supportReducer = useSelector(store => store.supportReducer)
     const history = useHistory()
 
+    //each reducer has our input due to action.payload
+    //thats why we are posting values of the reducers to the server
     const saveFeedback = () => {
 
         axios.post("/feedbackResult",

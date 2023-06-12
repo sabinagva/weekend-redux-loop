@@ -8,6 +8,10 @@ function NewFeedback () {
     const dispatch = useDispatch()
     const history = useHistory()
     
+    //this doesn't have payload because we are not really carrying anything 
+    //to the store
+    //we are just defining our type so we can erase the array
+    //when button is clicked
     const handleNewFeedback = () =>{
      dispatch({type: 'GET_NEW_FEEDBACK'})
      history.push('/feelings')

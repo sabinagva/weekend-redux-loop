@@ -2,6 +2,14 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 import './Feelings.css'
+
+//use history is used so we can got to a different page right away
+
+//dispatch will make it so when we can connect store and dispatch of feeling to 
+//render and be functional on feedback result page where we 
+//render feelings (and other components)
+
+//use state is for user inputs
 function Feelings () {
     const [feelingsInput, setFeelingsInput] =useState('');
     const dispatch = useDispatch()

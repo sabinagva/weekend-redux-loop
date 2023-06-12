@@ -10,6 +10,8 @@ import Understanding from '../Understanding/Understanding'
 import FeedbackResult from '../FeedbackResult/FeedbackResult'
 import NewFeedback from '../NewFeedback/NewFeedback'
 
+//below we  are creating front end routes for each page
+// we are not using link because we will switch to separate page with button 
 
 function App() {
 

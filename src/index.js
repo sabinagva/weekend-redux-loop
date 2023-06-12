@@ -9,6 +9,11 @@ import logger from 'redux-logger';
 
 
 //reducers
+//action.payload returns us whatever user put in the feeling input
+//if get_new_feedback action is triggered empty reducers
+//return action.payload is pushing our inputs to array
+//our action is the dispatch and payload was set to our input
+//thats how action.payload has our input value
 const feelingsReducer = (state = [], action) => {
     if( action.type === 'GET_FEELINGS') {
         return action.payload
@@ -71,7 +76,8 @@ const reduxStore = createStore(
     }),
     applyMiddleware(logger)
 );
-
+//store can be used on other pages
+//but how its only wrapped around app??????
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
