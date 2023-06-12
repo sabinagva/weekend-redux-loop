@@ -10,13 +10,13 @@ function Comments () {
 
     const handleNextBtn = (event) => {
         event.preventDefault()
-        history.push('/FeedbackResult')
         if (!commentsInput) {
             alert('please put something in')
         }
         else {
             dispatch({type: 'GET_COMMENTS', payload: commentsInput})
-        
+            history.push('/FeedbackResult')
+            
     
         }
         setCommentsInput('')

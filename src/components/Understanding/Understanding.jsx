@@ -9,13 +9,13 @@ function Understanding () {
     
     const handleNextBtn = (event) => {
         event.preventDefault()
-        history.push('/support')
+       
         if (!understandingInput) {
             alert('please put something in')
         }
         else {
             dispatch({type: 'GET_UNDERSTANDING', payload: understandingInput})
-        
+            history.push('/support')
     
         }
         setUnderstandingInput('')

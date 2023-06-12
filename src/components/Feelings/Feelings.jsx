@@ -19,13 +19,13 @@ function Feelings () {
 
     const handleNextBtn = (event) => {
         event.preventDefault()
-        history.push('/understanding')
         
         if (!feelingsInput) {
             alert('please put something in')
         }
         else {
         dispatch({type: 'GET_FEELINGS', payload: feelingsInput})
+        history.push('/understanding')
 
         }
         setFeelingsInput('')

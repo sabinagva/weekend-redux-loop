@@ -11,13 +11,13 @@ const history = useHistory()
 
 const handleNextBtn = (event) => {
     event.preventDefault()
-    history.push('/comments')
     if (!supportInput) {
         alert('please put something in')
     }
     else {
     dispatch({type: 'GET_SUPPORT', payload: supportInput})
-
+    history.push('/comments')
+        
     }
     setSupportInput('')
 
@@ -36,7 +36,8 @@ const handleNextBtn = (event) => {
             type="number"
             value={supportInput}
             id='Support-input'
-            min = '1'
+            required
+            min = '1' 
             max= '5'
             onChange={(event) => setSupportInput(event.target.value)}
 
