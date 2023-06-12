@@ -11,14 +11,23 @@ import './Feelings.css'
 
 //use state is for user inputs
 function Feelings () {
-    const [feelingsInput, setFeelingsInput] =useState('');
     const dispatch = useDispatch()
     const history = useHistory()
+    const [feelingsInput, setFeelingsInput] =useState('');
+    
+    
 
     const handleNextBtn = (event) => {
         event.preventDefault()
         history.push('/understanding')
+        
+        if (!feelingsInput) {
+            alert('please put something in')
+        }
+        else {
         dispatch({type: 'GET_FEELINGS', payload: feelingsInput})
+
+        }
         setFeelingsInput('')
 
     }

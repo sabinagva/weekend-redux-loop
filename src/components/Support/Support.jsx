@@ -12,7 +12,13 @@ const history = useHistory()
 const handleNextBtn = (event) => {
     event.preventDefault()
     history.push('/comments')
+    if (!supportInput) {
+        alert('please put something in')
+    }
+    else {
     dispatch({type: 'GET_SUPPORT', payload: supportInput})
+
+    }
     setSupportInput('')
 
 }

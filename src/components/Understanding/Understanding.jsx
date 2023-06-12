@@ -10,7 +10,14 @@ function Understanding () {
     const handleNextBtn = (event) => {
         event.preventDefault()
         history.push('/support')
-        dispatch({type: 'GET_UNDERSTANDING', payload: understandingInput})
+        if (!understandingInput) {
+            alert('please put something in')
+        }
+        else {
+            dispatch({type: 'GET_UNDERSTANDING', payload: understandingInput})
+        
+    
+        }
         setUnderstandingInput('')
     }
 
