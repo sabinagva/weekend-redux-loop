@@ -30,6 +30,8 @@ function Understanding () {
             type="number"
             id='Understanding-input'
             value={understandingInput}
+            min = '1'
+            max= '5'
             onChange={(event) => setUnderstandingInput(event.target.value)}
 
             /> 

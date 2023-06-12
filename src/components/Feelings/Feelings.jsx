@@ -37,6 +37,8 @@ function Feelings () {
             type="number"
             id='Feelings-input'
             value={feelingsInput}
+            min = '1'
+            max= '5'
             onChange={(event) => setFeelingsInput(event.target.value)}
 
             /> 

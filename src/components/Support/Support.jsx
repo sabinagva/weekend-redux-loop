@@ -30,6 +30,8 @@ const handleNextBtn = (event) => {
             type="number"
             value={supportInput}
             id='Support-input'
+            min = '1'
+            max= '5'
             onChange={(event) => setSupportInput(event.target.value)}
 
             /> 
